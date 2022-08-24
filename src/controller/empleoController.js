@@ -14,12 +14,11 @@ empleosController.agregar = async (req, res) => {
     const {titulo, descripcion, empleador} = req.body;
     const agregarEmpleo = `INSERT INTO ${table} (titulo, descripcion, empleador) VALUES (?, ?, ?)`;
     try {
-        await connection.promise().query(agregarEmpleo, [titulo,descripcion,empleador]);    
+        await connection.promise().query(agregarEmpleo, [titulo,descripcion,empleador]);
+        res.send('ok');
     } catch (error) {
         console.error(error);
         res.send('oops')
-    } finally {
-        res.send('ok');
     }
 }
 
