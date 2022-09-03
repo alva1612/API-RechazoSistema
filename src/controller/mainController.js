@@ -4,7 +4,7 @@ const mainController = {};
 
 mainController.index = (req, res) => {
     const info = {
-        titulo: 'Api de toDo',
+        titulo: 'Api de chambas',
         version: '0.0.1'
     }
     res.send(info);
