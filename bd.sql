@@ -30,3 +30,12 @@ create table tb_postulacion(
     references tb_empleo(id)
 )
 
+/*EMPLEADOR INSERT*/
+INSERT INTO `sistema_empleo`.`tb_empleador` (`id`, `nombre`, `n_empleo_solicitado`) VALUES ('1', 'FractalUp', '1');
+INSERT INTO `sistema_empleo`.`tb_empleador` (`id`, `nombre`, `n_empleo_solicitado`) VALUES ('2', 'Google', '0');
+
+/*EMPLEOS INSERT*/
+INSERT INTO `sistema_empleo`.`tb_empleo` (`id`, `titulo`, `descripcion`, `empleador`, `postulado`) VALUES ('1', 'BackEnd Junior', 'Parece medio explotador, pero seguro que se aprende bastante', '1', '1');
+
+/*POSTULACION INSERT*/
+INSERT INTO `sistema_empleo`.`tb_postulacion` (`id`, `empleo`, `f_postulacion`) VALUES ('1', '1', '2022/09/03');

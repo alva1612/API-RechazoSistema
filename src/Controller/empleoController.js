@@ -1,4 +1,5 @@
 import { connection } from "../db/conexion.js";
+import { Warning } from "../Models/Warning.js";
 import { buscarEmpleador } from "./utilsController.js";
 
 const empleosController = {};
@@ -9,7 +10,7 @@ empleosController.listar = async (req, res) => {
     const listar_empleos = `SELECT * FROM ${table}`;
     try {
         const [resultado, fields] = await connection.promise().query(listar_empleos);
-        res.send(resultado[0]);
+        res.send(resultado);
     } catch (error) {
         console.error(error);
     }
@@ -20,11 +21,8 @@ empleosController.agregar = async (req, res) => {
 
     const existsEmpleador = await buscarEmpleador(empleador);
     if(!existsEmpleador) {
-        const warning = {
-            id: 'err_01',
-            cause: 'No se encontró empleador para el empleo',
-        }
-        res.send(warning);
+        const warning = new Warning('err_001', 'Empleador not found');
+        res.send(warning);    
         return;
     }
 

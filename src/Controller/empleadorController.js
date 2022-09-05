@@ -8,7 +8,7 @@ empleadorController.listar = async (req, res) => {
     const listar_empleador = `SELECT * FROM ${table}`;
     try {
         const [resultado, fields] = await connection.promise().query(listar_empleador);
-        res.send(resultado[0]);
+        res.send(resultado);
     } catch (error) {
         console.error(error);
     }
