@@ -15,13 +15,13 @@ const urlEncoder = urlencoded({extended: true});
 routes.get("/", mainController.index)
 
 //METODOS RELACIONADOS AL EMPLEADOR
-routes.get("/empleadores",empleadorController.listar);
+routes.get("/empleador",empleadorController.listar);
 /* routes.get("/buscar-empleador", (req, res) => buscarEmpleador(req.query.id)); */
-routes.post("/new-empleador", urlEncoder, empleadorController.agregar);
+routes.post("/empleador", urlEncoder, empleadorController.agregar);
 
 //METODOS RELACIONADOS AL EMPLEO
-routes.get("/empleos", empleosController.listar);
-routes.post("/new-empleo", urlEncoder, empleosController.agregar);
+routes.get("/empleo", empleosController.listar);
+routes.post("/empleo", urlEncoder, empleosController.agregar);
 
 //METODOS RELACIONADOS A LA POSTULACION
 routes.get("/postulaciones", postulacionController.listar );

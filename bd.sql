@@ -29,6 +29,10 @@ create table tb_postulacion(
     constraint FK_EMPLEO_POSTULACION foreign key (empleo)
     references tb_empleo(id)
 )
+ALTER TABLE `sistema_empleo`.`tb_postulacion` 
+ADD UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE;
+;
+
 
 /*EMPLEADOR INSERT*/
 INSERT INTO `sistema_empleo`.`tb_empleador` (`id`, `nombre`, `n_empleo_solicitado`) VALUES ('1', 'FractalUp', '1');
