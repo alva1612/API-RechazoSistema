@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'chambaAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7DED63832A974710B31A068E0DEEE0D9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A3305D856C8B4CD9A94AC2B55CC2F9D9 }}
           package: .
