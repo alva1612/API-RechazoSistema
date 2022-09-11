@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Azure Login
         uses: Azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - uses: actions/checkout@v2
 
       - name: Set up Node.js version
