@@ -1,6 +1,6 @@
 import mysql from 'mysql2'
 
-const connection = mysql.createConnection({
+/* const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'sistema_empleo',
@@ -11,4 +11,4 @@ const connection = mysql.createConnection({
 
 
 
-export {connection};
+export {connection}; */
