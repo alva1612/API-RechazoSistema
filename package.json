@@ -1,5 +1,5 @@
 {
-  "name": "todo-api",
+  "name": "chamba-api",
   "version": "1.0.0",
   "description": "Api de ToDo",
   "main": "index.js",
