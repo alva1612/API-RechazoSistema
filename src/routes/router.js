@@ -4,7 +4,7 @@ import pkg from "body-parser";
 import { mainController } from "../Controller/mainController.js";
 import { empleosController } from "../Controller/empleoController.js";
 import { empleadorController } from "../Controller/empleadorController.js";
-import { buscarEmpleador } from "../controller/utilsController.js";
+import { buscarEmpleador } from "../Controller/utilsController.js";
 import { postulacionController } from "../Controller/postulacionController.js";
 
 const routes = Router();
