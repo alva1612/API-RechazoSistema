@@ -1,8 +1,12 @@
 import express from "express"
+import * as dotenv from 'dotenv'
 import { routes } from "./routes/router.js"
+
+dotenv.config()
+
 const app = express()
-const host = "0.0.0.0"
-const port = 3002
+const host = process.env.HOST
+const port = process.env.PORT
 
 const options = {
     host,

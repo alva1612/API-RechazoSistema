@@ -1,14 +1,16 @@
 import mysql from 'mysql2'
 
-const connection = mysql.createConnection({
-    host: 'containers-us-west-100.railway.app',
-    port: '7701',
+const connection = mysql.createPool({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
     user: 'root',
     database: 'railway',
-    password: '5lvCuG4HnfofmcYra9g7'
+    password: process.env.DB_PASSWORD
 });
 
-
+connection.on('connection', () => {
+    console.log('Conexión establecida')
+})
 
 
 
